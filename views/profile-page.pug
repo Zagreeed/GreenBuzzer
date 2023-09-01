@@ -1,0 +1,54 @@
+extends base
+
+block content 
+	main.mainnn
+		.user-vis
+			.user-stuff 
+				img(src=`./images/users/${user.photo}`, alt="leo")
+				h2= user.name
+				br
+				h4= user.role 
+				button.log-out-btn Log-Out
+		.user-info 
+			.user-info-card
+				h3 Information 
+				hr
+				.user-contact 
+					.user-via
+						h3 Email
+						p.gray= user.email
+					.user-via
+						h3 Phone
+						p.gray 09662181582
+				h3 Settings
+				hr
+				.changeOp 
+					h3 Change Settings
+					.changeOpBtn
+						button.left-btn ◀
+						button.right-btn ▶
+				form.user-settings
+					.user-via-settings
+						label Current Password
+						input.current-pass(type="password")
+					.user-via-settings
+						label New Password
+						input.new-pass(type="password")
+					.user-via-settings
+						label Confirm Password
+						input.confirm-pass(type="password")
+					button.change-pass-btn Submit
+				form.user-settingsss.switchOp
+					.user-via-settings
+						label New name
+						input.new-name(type="text")
+					.user-via-settings
+						label New email
+						input.new-email(type="text")
+					button.change-pass-btn Submit
+
+					
+
+
+
+			

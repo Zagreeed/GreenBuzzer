@@ -1,0 +1,25 @@
+extends base
+
+block content 
+	section.section.product-detail
+		.details.container
+			.left.image-container
+				.main
+					img#zoom(src=`/images/${product.classification ==='Vegetable' ? "vegtables" : "fruits"}/${product.photo}` alt=`${product.name}`)
+			div.right(product-id=`${product.id}`)
+				span Fresh Harvested
+				h1= product.name
+				.price= `₱ ${product.price}`
+				form.add-to-cart
+					select(name="Sizes" id='sizes')
+						option(value='1') small
+						option(value='2') medium
+						option(value='3') large
+
+						input.quantity(type='number' placeholder='1')
+						button To Cart	
+				h3 Product Detail
+				p
+					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
+					| delectus nulla voluptates nesciunt quidem laudantium, quisquam
+					| voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!

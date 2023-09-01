@@ -1,0 +1,33 @@
+extends base
+
+block content 
+	section#products.section.all-products
+		.top.container
+			h1 Fruits Market
+			form
+				select
+					option(value='1') Defualt Sorting
+					option(value='2') Sort By Price
+					option(value='3') Sort By Popularity
+					option(value='4') Sort By Sale
+					option(value='5') Sort By Rating
+				span
+					i.bx.bx-chevron-down
+		.product-center.container
+			each fruit in fruits
+				.product-item
+					.overlay
+						a.product-thumb(href=`/product/${fruit.slug}`)
+							img(src=`./images/fruits/${fruit.photo}` alt='')
+						span.discount= `${fruit.priceDiscount}%`
+					.product-info
+						span= fruit.name
+						a(href=`/product/${fruit.slug}`)= `Freshly Harvested ${fruit.name}`
+						h4=`₱ ${fruit.price}`
+					ul.icons
+						li
+							i.bx.bx-heart
+						li
+							i.bx.bx-search
+						li
+							i.bx.bx-cart

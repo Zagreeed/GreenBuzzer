@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.back-img {
+  position: relative;
+  overflow: hidden;
+}
+.back-img > img {
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  color: green;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  bottom: -5;
+  left: 0;
+  right: 0;
+}
+
+.card {
+  margin-top: 1em;
+  height: 36em;
+  width: 24em;
+  background-color: white;
+  border-radius: 0.5em;
+  /* border: 1px solid lightblue; */
+  font-family: "Poppins", sans-serif;
+}
+
+.resize {
+  height: 2px;
+}
+.card > h1 {
+  text-align: center;
+  margin-top: 1.3em;
+  color: #55c57a;
+  /* font-weight: 500; */
+}
+
+.form-con {
+  margin-top: 3em;
+}
+
+.form-control {
+  position: relative;
+  margin: 1.5em 2em 0.8em;
+  width: 190px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #55c57a;
+  display: block;
+  width: 165%;
+  padding: 15px 0;
+  font-size: 15px;
+  color: #55c57a;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #55c57a;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #55c57a;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #55c57a;
+  transform: translateY(-30px);
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  justify-content: right;
+  color: #55c57a;
+  margin: 1em 3em;
+  font-size: 0.8em;
+  transition: 0.5s;
+}
+
+a:hover {
+  transition: 0.5s;
+  color: #234567;
+}
+
+.cta {
+  position: relative;
+  margin: 2.5em 9.9em;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #55c57a;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+.cta a {
+  margin: 0;
+}
+
+.cta a span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta a svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  justify-content: center;
+  stroke: #051d4c;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  margin-top: 0.5em;
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #55c57a;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+.icons-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons-con > img {
+  height: 2.5em;
+  cursor: pointer;
+  margin: 0.5em;
+}
+h6 {
+  color: #55c57a;
+  text-align: center;
+  margin-top: 1em;
+}

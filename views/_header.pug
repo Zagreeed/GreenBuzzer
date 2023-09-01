@@ -1,0 +1,42 @@
+header.header#header
+  .navigation
+    .nav-center.container.d-flex
+      a.logo(href="/")
+        img.asd(src="/images/logo333333.png", alt="")
+      ul.nav-list.d-flex
+        li.nav-item
+          a.nav-link(href="/") Home
+        li.nav-item
+          a.nav-link(href="/vegetables") Vegetables
+        li.nav-item
+          a.nav-link(href="/fruits") Fruits
+        .search-container
+          input.search-input(placeholder="Type to search...", required="", class="search-input", name="text", type="text")
+          .search-icon
+            svg.search-svg(viewBox="0 0 512 512", class="search-svg", xmlns="http://www.w3.org/2000/svg")
+              title Search
+              path(stroke-width="32", stroke-miterlimit="10", stroke="currentColor", fill="none", d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z")
+              path(d="M338.29 338.29L448 448", stroke-width="32", stroke-miterlimit="10", stroke-linecap="round", stroke="currentColor", fill="none")
+        li.icons.d-flex
+          a.icon(href="login.html")
+            i.bx.bx-user
+          div.icon
+            i.bx.bx-search
+          div.icon
+            i.bx.bx-heart
+            span.d-flex 0
+          a.icon(href="cart.html")
+            i.bx.bx-cart
+            span.d-flex 0
+      div.icons.d-flex
+        if user
+          a.profile-icon(href="/profile")
+            img.profile-pic(src=`/images/users/${user.photo}`, alt="user")
+          a.icon(href="/showCart")
+            i.bx.bx-cart
+            span.d-flex= user.cart.length
+        else
+          a.icon(href="/loginnn")
+            i.bx.bx-user
+      div.hamburger
+        i.bx.bx-menu-alt-left

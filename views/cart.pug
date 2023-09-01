@@ -1,0 +1,34 @@
+extends base
+
+block content 
+		form.product-main 
+			.product-details 
+				.product-head
+					h5 PRODUCT 
+					h5 PRICE 
+					h5 QTY 
+					h5 TOTAL
+				.product-main-card
+					each cart in user.cart
+						.cart-border
+							.product-card 
+								.product-with-img 
+									img(src=`./images/${cart.productId.classification === "Vegetable" ? "Vegtables": "fruits"}/${cart.productId.photo}`, alt="ads")
+									h5= cart.productId.name
+									h5= `ID:${cart.productId.id}`
+									h5.close X
+								.product-options
+									h5.margin-right= `₱${cart.productId.price}`
+									.plus-minus 
+										h5.minus -
+										h5.cart-quantity= cart.quantity
+										h5.add +
+									h5.margin-left= `₱${cart.productId.price * cart.quantity} `
+					
+			.check-out-sec 
+				.line
+				h3 CART TOTAL 999999
+				p Shipping and taxes calculated at checkout
+				button CHECKOUT
+
+

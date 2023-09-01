@@ -1,0 +1,13 @@
+extends base
+
+block content 
+	.login-card 
+		h1 Log into your account
+		form.login-form(action="") 
+			.input-dir 
+				label(for="email") Email Address 
+				input.email-input(type="email")
+			.input-dir 
+				label(for="password") Password 
+				input.pass-input(type="password")
+			button.logIn-btn Login
